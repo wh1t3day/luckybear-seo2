@@ -64,6 +64,7 @@
       100% { background-position: 120% 50%; }
     }
 
+    html { overflow-x: hidden; }
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -95,6 +96,7 @@
       gap: 18px;
       align-items: center;
       padding: 18px 0;
+      overflow: hidden;
     }
     .brand {
       display: inline-flex;
@@ -130,6 +132,7 @@
       overflow-x: auto;
       scrollbar-width: none;
       -ms-overflow-style: none;
+      min-width: 0;
     }
     .nav-links::-webkit-scrollbar { display: none; }
     .nav-links a {
@@ -422,7 +425,7 @@
       box-shadow: 0 20px 50px rgba(0,0,0,0.45);
       z-index: 9;
       max-width: 320px;
-      width: auto;
+      width: min(320px, calc(100% - 32px));
       animation: floaty 8s ease-in-out infinite;
     }
     .floating-cta button {
@@ -459,6 +462,7 @@
       .brand-name { font-size: 1rem; }
       .hero { padding-top: 16px; }
       .hero-figure { min-height: unset; }
+      .nav-play { display: none; }
     }
     @media (max-width: 560px) {
       .floating-cta {
@@ -494,7 +498,7 @@
         <a href="#seo">Официальность</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-primary" href="https://lbgame777.xyz/5WRLsv" target="_blank" rel="noopener">Играть</a>
+      <a class="btn btn-primary nav-play" href="https://lbgame777.xyz/5WRLsv" target="_blank" rel="noopener">Играть</a>
     </div>
   </header>
 
